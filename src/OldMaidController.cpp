@@ -43,8 +43,8 @@ void OldMaidController::initOldMaid() {
 };
 
 void OldMaidController::shuffleAndDeal() {
-    random_shuffle(model.getDeck().begin(), model.getDeck().end());
-    for (Card card : model.getDeck()) {
-        card.printCard();
+    model.getDeck()->shuffle();
+    for (Card c : model.getDeck()->getCards()) {
+        c.printCard();
     };
 };

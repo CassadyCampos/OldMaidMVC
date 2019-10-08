@@ -10,23 +10,22 @@ using namespace std;
 class OldMaid
 {
     public:
-        OldMaid(Deck deck) {
-            this->setDeck(deck);
+        OldMaid() {
+            deck = new Deck();
         };
 
-        virtual ~OldMaid() {};
+        virtual ~OldMaid() {
+//            delete[] deck;
+//            deck = nullptr;
+        };
         void addPlayer(string name);
 
-        void setDeck(Deck deck) {
-            deck = deck;
-        };
-
         int getPlayersSize();
-        vector<Card> getDeck();
+        Deck* getDeck();
         vector<Player> getAllPlayers();
 
     private:
-        Deck deck;
+        Deck* deck;
         vector<Player> players;
 
 };

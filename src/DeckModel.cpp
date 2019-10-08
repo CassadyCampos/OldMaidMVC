@@ -19,3 +19,7 @@ void Deck::generateDeck() {
 vector<Card> Deck::getCards() {
     return cards;
 };
+
+void Deck::shuffle() {
+    random_shuffle(cards.begin(), cards.end());
+};

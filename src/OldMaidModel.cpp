@@ -8,8 +8,8 @@ int OldMaid::getPlayersSize() {
     return players.size();
 };
 
-vector<Card> OldMaid::getDeck() {
-    return deck.getCards();
+Deck*OldMaid::getDeck() {
+    return deck;
 };
 
 vector<Player> OldMaid::getAllPlayers() {

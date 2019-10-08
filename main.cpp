@@ -9,14 +9,17 @@ using namespace std;
 
 int main()
 {
-    Deck deck;
-    OldMaid model(deck);
+    OldMaid model;
     OldMaidView view;
     OldMaidController controller(model, view);
-    controller.oldMaidGameLoop();
-
-
-
-
+//    controller.oldMaidGameLoop();
+    Deck deck;
+    for (Card c : deck.getCards()) {
+        c.printCard();
+    }
+    deck.shuffle();
+    for (Card c : deck.getCards()) {
+        c.printCard();
+    };
 	return 0;
 };
