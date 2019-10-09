@@ -1,11 +1,12 @@
-#include "cardModel.h"
+//#include "../include/CardModel.h"
+#include "CardModel.h"
 #include <iostream>
 
-Card::Card(const string rank, const string suite) {
-	this->rank = rank;
+Card::Card(const string rankCard, const string suite) {
+	this->rankCard = rankCard;
 	this->suite = suite;
 };
 
 void Card::printCard() {
-	cout << "Rank: " << rank << "  Suite: " << suite << endl;
-}; 
+	cout << "Rank: " << rankCard << "  Suite: " << suite << endl;
+};

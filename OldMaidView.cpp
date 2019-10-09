@@ -1,9 +1,15 @@
+// #include "../include/OldMaidView.h"
 #include "OldMaidView.h"
 
-int iGameView::askPlayersView() {
-	int numberOfPlayers;
-	cout << "How many players would you like?\n 1\n 2\n 3\n 4\n";
-	cin >> numberOfPlayers;
+void OldMaidView::oldMaidMenuView() {
+	cout << "Welcome to Old Maid!" << endl;
+	cout << "1. Play \n2. How To Play \n3. Exit \n";\
+};
 
-	return numberOfPlayers;
+void OldMaidView::askForPlayersView() {
+	cout << "How many people are playing? (2-4) ";
+};
+
+void OldMaidView::askPlayerName() {
+	cout << "Enter player name: ";
 };

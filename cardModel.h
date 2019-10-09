@@ -1,24 +1,19 @@
-#pragma once
 #include <string>
 
-#ifndef CARD
-#define CARD
+#ifndef CARD_MODEL
+#define CARD_MODEL
 
 using namespace std;
-
-
 
 class Card
 {
 
 
 public:
-	Card(const string rank, const string suite);
-	const string ranks[13] = { "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q,", "K" };
-	const string suites[4] = { "Spades", "Hearts", "Clubs", "Diamonds" };
+	Card(const string rankCard, const string suite);
 	void printCard();
 private:
-	string rank;
+	string rankCard;
 	string suite;
 };
 
