@@ -11,12 +11,13 @@ class Player
 public:
 	Player(string name) {
 		this->name = name;
+		hand = {};
 	};
 
 	~Player() {};
-	string getName() {
-		return name;
-	};
+	string getName();
+	void addCard(Card card);
+	vector<Card> getHand();
 private:
 	string name;
 	vector<Card> hand;

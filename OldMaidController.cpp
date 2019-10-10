@@ -16,6 +16,7 @@ void OldMaidController::oldMaidMenu() {
 	switch (input) {
 	case 1:
 		initOldMaid();
+		playerTurn(0);
 		break;
 	case 2:
 		cout << "You will read the instructions of old maid\n";
@@ -31,21 +32,31 @@ void OldMaidController::initOldMaid() {
 
 	view.askForPlayersView();
 	cin >> numberOfPlayers;
+
 	for (int i = 0; i < numberOfPlayers; i++) {
 		view.askPlayerName();
 		cin >> playerName;
 		model.addPlayer(playerName);
 	};
-	cout << model.getPlayersSize();
-	for (Player player : model.getAllPlayers()) {
-		cout << player.getName() << endl;
-	};
+
 	shuffleAndDeal();
 };
 
 void OldMaidController::shuffleAndDeal() {
-	model.getDeck()->shuffleDeck();
-	for (Card c : model.getDeck()->getCards()) {
-		c.printCard();
+	//model.getDeck()->shuffleDeck();
+	model.getDeck()->removeQueen();
+	model.dealCards();
+};
+
+void OldMaidController::playerTurn(int playerAt) {
+	Player currentPlayer = model.getPlayers()[playerAt];
+	if (playerAt == 0) {
+		Player previousPlayer = model.getPlayers()[model.getPlayers().size() - 1];
+		view.playerHandViewHidden(previousPlayer);
+	} else {
+		Player previousPlayer = model.getPlayers()[playerAt - 1];
+		view.playerHandViewHidden(previousPlayer);
 	};
+
+
 };

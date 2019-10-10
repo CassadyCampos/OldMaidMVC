@@ -31,6 +31,7 @@ public:
 	void oldMaidMenu();
 	void initOldMaid();
 	void shuffleAndDeal();
+	void playerTurn(int playerAt);
 
 protected:
 

@@ -13,14 +13,6 @@ int main()
 	OldMaidView view;
 	OldMaidController controller(model, view);
 	controller.oldMaidGameLoop();
-	//    Deck deck;
-//    for (Card c : deck.getCards()) {
-//        c.printCard();
-//    }
-//    deck.shuffle();
-//    for (Card c : deck.getCards()) {
-//        c.printCard();
-//    };
 	return 0;
 };
 

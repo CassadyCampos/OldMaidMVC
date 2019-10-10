@@ -22,7 +22,9 @@ public:
 
 	int getPlayersSize();
 	Deck* getDeck();
-	vector<Player> getAllPlayers();
+	vector<Player> getPlayers();
+
+	void dealCards();
 
 private:
 	Deck* deck;

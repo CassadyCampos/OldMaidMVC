@@ -1,4 +1,5 @@
 #include <iostream>
+#include "OldMaidModel.h"
 #ifndef OLDMAIDVIEW_H
 #define OLDMAIDVIEW_H
 
@@ -11,7 +12,8 @@ public:
 	void oldMaidMenuView();
 	void askForPlayersView();
 	void askPlayerName();
-
+	void playerHandView(Player player);
+	void playerHandViewHidden(Player player);
 protected:
 
 private:
