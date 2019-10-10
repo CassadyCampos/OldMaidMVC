@@ -29,3 +29,7 @@ void OldMaidView::playerHandViewHidden(Player player) {
 	};
 	//cout << "\nSelect which card position you wish to take.";
 };
+
+void OldMaidView::askForCardView() {
+	cout << "\nSelect which card position you wish to take.";
+};

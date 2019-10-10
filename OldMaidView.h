@@ -14,6 +14,7 @@ public:
 	void askPlayerName();
 	void playerHandView(Player player);
 	void playerHandViewHidden(Player player);
+	void askForCardView();
 protected:
 
 private:

@@ -25,6 +25,7 @@ public:
 	vector<Player> getPlayers();
 
 	void dealCards();
+	Card takeCardFrom(Player player, int cardPosition);
 
 private:
 	Deck* deck;

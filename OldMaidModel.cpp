@@ -31,3 +31,9 @@ void OldMaid::dealCards() {
 		};
 	};
 };
+
+Card OldMaid::takeCardFrom(Player player, int cardPosition) {
+	Card cardTaken = player.getHand()[cardPosition];
+	return cardTaken;
+
+};
