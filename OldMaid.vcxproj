@@ -152,22 +152,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CardModel.cpp" />
-    <ClCompile Include="Deck.cpp" />
-    <ClCompile Include="GameController.cpp" />
-    <ClCompile Include="GameModel.cpp" />
-    <ClCompile Include="GameView.cpp" />
+    <ClCompile Include="DeckModel.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="OldMaidController.cpp" />
     <ClCompile Include="OldMaidModel.cpp" />
     <ClCompile Include="OldMaidView.cpp" />
     <ClCompile Include="PlayerModel.cpp" />
+    <ClCompile Include="CardModel.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="cardModel.h" />
-    <ClInclude Include="Deck.h" />
-    <ClInclude Include="GameController.h" />
-    <ClInclude Include="GameModel.h" />
-    <ClInclude Include="GameView.h" />
+    <ClInclude Include="DeckModel.h" />
     <ClInclude Include="OldMaidController.h" />
     <ClInclude Include="OldMaidModel.h" />
     <ClInclude Include="OldMaidView.h" />

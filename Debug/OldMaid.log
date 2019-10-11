@@ -1,10 +1,2 @@
-﻿  CardModel.cpp
-  Deck.cpp
-  GameController.cpp
-  GameModel.cpp
-  GameView.cpp
-  main.cpp
-  OldMaidModel.cpp
-  PlayerModel.cpp
-  Generating Code...
+﻿  OldMaidView.cpp
   OldMaid.vcxproj -> C:\Users\Cassady\Documents\School\CPSC 3720\OldMaid\Debug\OldMaid.exe
