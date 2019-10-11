@@ -12,3 +12,11 @@ vector<Card> Player::getHand() {
 void Player::addCard(Card c) {
 	hand.push_back(c);
 };
+
+void Player::removeCardAt(int position) {
+	hand.erase(hand.begin() + position);
+};
+
+void Player::addCardToHand(Card card) {
+	hand.push_back(card);
+};

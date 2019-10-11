@@ -1,7 +1,7 @@
 #include "DeckModel.h"
 
 Deck::Deck() {
-	generateDeck();
+	//generateDeck();
 }
 
 void Deck::generateDeck() {
@@ -11,7 +11,7 @@ void Deck::generateDeck() {
 	for (string rankI : ranks) {
 		for (string suiteI : suites) {
 			cards.push_back(Card(rankI, suiteI));
-			cout << "Rank: " << rankI << "    Suite: " << suiteI << endl;
+			//cout << "Rank: " << rankI << "    Suite: " << suiteI << endl;
 		};
 	};
 };

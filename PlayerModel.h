@@ -18,6 +18,9 @@ public:
 	string getName();
 	void addCard(Card card);
 	vector<Card> getHand();
+	void removeCardAt(int position);
+	void addCardToHand(Card card);
+
 private:
 	string name;
 	vector<Card> hand;

@@ -20,6 +20,7 @@ public:
 
 	void setModel(const OldMaid model) {
 		this->model = model;
+		this->model.getDeck()->generateDeck();
 	};
 	void setView(const OldMaidView view) {
 		this->view = view;
@@ -32,6 +33,7 @@ public:
 	void initOldMaid();
 	void shuffleAndDeal();
 	void playerTurn(int playerAt);
+
 
 protected:
 
