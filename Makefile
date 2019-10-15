@@ -5,7 +5,7 @@ LINKFLAGS= -lgtest
 
 SRC_DIR = src
 # Add a list of your source code files here
-SRCS =
+SRCS = CardModel.cpp
 
 TEST_DIR = test
 
@@ -48,9 +48,9 @@ clean-all: clean
 $(PROGRAM):
 	$(CXX) $(CXXFLAGS) -o $(PROGRAM) -I $(SRC_INCLUDE) $(SRC_DIR)/*.cpp $(LINKFLAGS)
 
-$(PROGRAM_TEST):
-	$(CXX) $(CXXFLAGS) -o $(PROGRAM_TEST) $(INCLUDE) $(TEST_DIR)/*.cpp $(SRCS) $(LINKFLAGS) $(GMOCK)
-	$(PROGRAM_TEST)
+$(PROGRAM_TEST): $(TEST_DIR)/main.cpp $(SRC_DIR)
+	$(CXX) $(CXXFLAGS) -o $(PROGRAM_TEST) $(INCLUDE) \
+	$(TEST_DIR)/*.cpp $(SRC_DIR)/*.cpp  $(LINKFLAGS)
 
 memcheck-game: $(PROGRAM)
 	valgrind --tool=memcheck --leak-check=yes --xml=yes --xml-file=$(MEMCHECK_RESULTS) $(PROGRAM)
